@@ -1,0 +1,47 @@
+<!--<div class="container">
+  <h1>Welcome to the World's Longest Word Game!</h1>
+
+  <div class="letters-container">
+    <h2>Here are your letters:</h2>
+    <div class="letters">
+      <%# @letters.each do |letter| %>-->
+<!--        <span class="letter"><%#= letter.upcase %></span>-->
+      <%# end %>
+<!--    </div>
+  </div>
+
+  <div class="input-form">
+    <h2>What is your longest word?</h2>
+    <form action="score" method="get" data-turbo="false">
+      <input type="text" name="word" placeholder="Write here" class="input-word">
+      <input type="submit" value="Submit" class="submit-btn">
+    </form>
+  </div>
+</div>-->
+
+<div class="container">
+  <h1>Welcome to the World's Longest Word Game!</h1>
+
+  <div class="stats">
+    <h2>Valid Words Found: <%= session[:valid_count] %></h2>
+    <h2>Longest Valid Word: <%= session[:longest_word].upcase %></h2>
+  </div>
+
+  <div class="letters-container">
+    <h2>Here are your letters:</h2>
+    <div class="letters">
+      <% @letters.each do |letter| %>
+        <span class="letter"><%= letter.upcase %></span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="input-form">
+    <h2>What is your longest word?</h2>
+    <form action="score" method="get" data-turbo="false">
+      <input type="text" name="word" placeholder="Write here" class="input-word">
+      <input type="submit" value="Submit" class="submit-btn">
+    </form>
+  </div>
+</div>
+

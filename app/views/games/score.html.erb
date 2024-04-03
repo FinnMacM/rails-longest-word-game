@@ -1,0 +1,24 @@
+<!--<h1>Result</h1>
+<h4> <%#= @word %> is <%= @message %> <%= @letters %></h4>
+<h2> <%#= link_to "Play again", "new" %> </h2>
+-->
+
+<div class="container">
+  <h1>Result</h1>
+
+  <div class="result-container">
+    <h2>Your word: <span class="word"><%= @word.upcase %></span></h2>
+    <h3><%= @word %> is <%= @message %>.</h3>
+    <div class="letters-display">
+      <h4>Letters were:</h4>
+      <% @letters.each do |letter| %>
+        <span class="letter"><%= letter.upcase %></span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="play-again">
+    <%= link_to "Play again", "new", class: "play-again-btn" %>
+  </div>
+</div>
+
